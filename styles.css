@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+body {
+    font-family: 'Cormorant Garamond', serif;
+}
+img {
+    max-width: 100%;
+    
+}
+.container {
+    max-width: 1200px;
+    margin: 0 ;
+
+}
+.header {
+  display: flex;
+  align-items: center;
+  min-height: 80vh;
+  background: linear-gradient(
+    90deg,
+    rgba(241,237,220,1) 0%,
+    rgba(255,255,253,1)50%,
+    rgba(252,246,232,1) 100%,
+
+
+
+
+  );
+  padding: 70px 0;
+}
+.menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+}
+.logo {
+    font-size: 25px;
+    font-weight: 800 ;
+    color:#FF3C2A;
+    text-transform: uppercase;
+}
