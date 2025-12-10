@@ -26,10 +26,6 @@ img {
     rgba(241,237,220,1) 0%,
     rgba(255,255,253,1)50%,
     rgba(252,246,232,1) 100%,
-
-
-
-
   );
   padding: 70px 0;
 }
@@ -39,6 +35,7 @@ img {
     left: 0;
     right: 0;
     display: flex;
+    align-items: center;
     justify-content: space-between;
 }
 .logo {
@@ -47,3 +44,49 @@ img {
     color:#FF3C2A;
     text-transform: uppercase;
 }
+.menu .navbar ul li {
+   position: relative;
+   float: left;
+}
+.menu .navbar ul li a {
+    font-size: 18px;
+    padding: 20px;
+    color: #111111;
+    display: block;
+}
+.menu .navbar ul li a:hover {
+    color: #FF3C2A;
+}
+#menu{
+    display: none;
+}
+.menu-icon {
+    width: 25px;
+}
+.menu label {
+    display: none;
+    cursor: pointer;
+}
+
+
+.submenu {
+    position: relative;
+}
+.submenu #carrito {
+    display: none;
+
+}
+.submenu:hover #carrito {
+    display: block;
+    position: absolute;
+    right: 0;
+    backdrop-filter: BLUR(10px) ;
+    top: 100%;
+    z-index:1 ;
+    background-color: #4E4b5e76;
+    padding: 20px;
+    min-width: 400px;
+    
+
+
+} 
