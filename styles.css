@@ -12,10 +12,12 @@ img {
     max-width: 100%;
     
 }
+/* -------------------- CONTAINER --------------------- */
 .container {
     max-width: 1200px;
     margin: 0 ;
 }
+/* ---------------------- HEADER ----------------------- */
 .header {
   display: flex;
   align-items: center;
@@ -43,6 +45,7 @@ img {
     color:#FF3C2A;
     text-transform: uppercase;
 }
+/* NAV */
 .menu .navbar ul li {
    position: relative;
    float: left;
@@ -100,6 +103,7 @@ th, td {
     font-weight: 800;
     cursor: pointer;      
 }
+/* -------------------- HEADER CONTENT -------------------- */
 .header-content {
     display: flex;
    align-items: center;
@@ -140,6 +144,7 @@ p{
     flex: 60%;
     text-align: right;
 }
+/* -------------------- OFERTAS -------------------- */
 .Ofertas{
     padding: 100px 0;
 }
@@ -247,4 +252,24 @@ h3{
     grid-template-columns: repeat(3,1fr);
     gap: 30px;
     margin-bottom:50px;
+}
+/* -------------------- FOOTER -------------------- */
+
+.footer{
+    padding: 70px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer h3{
+    margin-bottom: 20px;
+}
+
+.footer ul li{
+    margin-bottom: 10px;
+}
+
+.footer ul li a{
+    color: #333;
+    font-size: 18px;
 }
