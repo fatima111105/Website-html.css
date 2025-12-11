@@ -15,20 +15,17 @@ img {
 /* -------------------- CONTAINER --------------------- */
 .container {
     max-width: 1200px;
-    margin: 0 ;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 /* ---------------------- HEADER ----------------------- */
 .header {
-  display: flex;
-  align-items: center;
-  min-height: 80vh;
-  background: linear-gradient(
-    90deg,
-    rgba(241,237,220,1) 0%,
-    rgba(255,255,253,1) 50%,
-   rgba(252,246,232,1) 100%
-  );
-  padding: 70px 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 80vh;
+    background: linear-gradient(90deg, #ffe6f0 0%, #ffcce6 50%, #ffb3d9 100%);
+    position: relative;
+    padding: 70px 0;
 }
 .menu {
     position: absolute;
@@ -145,113 +142,98 @@ p{
     text-align: right;
 }
 /* -------------------- OFERTAS -------------------- */
-.Ofertas{
+
+.Ofertas {
     padding: 100px 0;
 }
-h2{
+
+h2 {
     font-size: 40px;
-    line-height: 1;
     margin-bottom: 10px;
-    color: #333333;
+    color: #333;
 }
-.Ofertas-content{
+
+.Ofertas-content {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 30px;
+    align-items: stretch;
+    gap: 30px;
+    margin: 40px 0;
 }
-.oferts-1{
-    flex-basis: calc(30% - 30px);
-    box-shadow:0 0 20px rgba(0,0,0,0.2) ;
-    padding: 25px;
+
+.oferts-1 {
+    flex: 1;
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
     text-align: center;
-    background-color: #fff;
-    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
-.oferts-1 img{
-    width: 130px;
-    height: 170px;
-    margin-bottom: 10px;
 
+.oferts-1 img {
+    width: 150px;
+    height: auto;
+    margin-bottom: 15px;
 }
-h3{
-    font-size: 20px;
-    margin-bottom: 10px;
-    color: #333333;
-    line-height: 1;
 
-}
-.producto-txt p{
-    margin-bottom: 10px;
-}
-.precio{
+.oferts-1 h3 {
     font-size: 22px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.producto-txt p {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.precio {
+    font-size: 22px;
+    font-weight: bold;
     color: red;
-    font-weight: 700;
     margin-bottom: 20px;
 }
-.btn-3{
-    padding: 4px 20px;
+
+.btn-3 {
+    padding: 6px 25px;
 }
 
-.logan-1{
-    flex-basis: 40%;
+/* ---- TARJETA GRANDE (PROMOCIÓN SILLAS) ---- */
+
+.logan-1 {
+    flex: 1;
+    height: 340px;
     background: linear-gradient(
-
-        rgba(0,0,0,0.3) ,
-        rgba(0,0,0,0.3) 
-    ),
-    url(images/ch1.jpg);
-    background-position: center center;
-    background-repeat: no-repeat;
+            rgba(0, 0, 0, 0.3),
+            rgba(0, 0, 0, 0.3)
+        ),
+        url(images/ch1.jpg);
     background-size: cover;
-    padding: 50px ;
-    border-radius: 10px;
-}
-.logan-1 h3{
-   font-size: 30px;
-   color: #ffffff;
-   text-transform: uppercase;
-
-}
-.logan-1 p{
-    font-size: 18px    ;
-    text-transform: uppercase;
-    margin: 20px;
-    color: #f7f7f7;
-}
-.btn-2{
-    display:inline-block;
-    padding: 8px 30px ;
-    color: #ffffff;
-    border: 1px solid #fff;
-
-}
-.promotion{
-    padding: 80px 0;
-    background-color: #f7f7f7;
-}
-.promotion-content{
+    background-position: center;
+    border-radius: 12px;
+    padding: 40px;
     display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
-.promotion-txt{
-    flex-basis: 50;
+
+.logan-1 h3 {
+    font-size: 32px;
+    color: #fff;
+    margin-bottom: 10px;
 }
-.promotion-img{
-    flex-basis: 50%;
-    text-align: center;
+
+.logan-1 p {
+    font-size: 18px;
+    color: #eee;
+    margin-bottom: 30px;
 }
-.promotion-img img{
-    width: 250px;
-}
-.producto{
-    padding: 100px 0;
-    text-align: center;
-}
-.producto-content{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 30px;
-    margin-bottom:50px;
+
+.btn-2 {
+    padding: 10px 25px;
+    border: 1px solid #fff;
+    color: #fff;
+    display: inline-block;
 }
 /* -------------------- FOOTER -------------------- */
 
