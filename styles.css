@@ -1,24 +1,32 @@
-*{
+/* -------------------- RESET -------------------- */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
 }
+
 body {
     font-family: 'Cormorant Garamond', serif;
+    background-color: #fff0f5; /* fondo general rosa suave */
+    color: #333;
 }
+
+/* -------------------- IMÁGENES -------------------- */
 img {
     max-width: 100%;
-    
+    display: block;
 }
-/* -------------------- CONTAINER --------------------- */
+
+/* -------------------- CONTAINER -------------------- */
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
-/* ---------------------- HEADER ----------------------- */
+
+/* -------------------- HEADER -------------------- */
 .header {
     display: flex;
     flex-direction: column;
@@ -27,6 +35,8 @@ img {
     position: relative;
     padding: 70px 0;
 }
+
+/* -------------------- MENU -------------------- */
 .menu {
     position: absolute;
     top: 0;
@@ -35,223 +45,370 @@ img {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 20px 0;
 }
+
 .logo {
-    font-size: 25px;
-    font-weight: 800 ;
-    color:#FF3C2A;
+    font-size: 28px;
+    font-weight: 800;
+    color: #ff4d94;
     text-transform: uppercase;
 }
-/* NAV */
-.menu .navbar ul li {
-   position: relative;
-   float: left;
+
+.menu .navbar ul {
+    display: flex;
 }
+
+.menu .navbar ul li {
+    margin-left: 20px;
+}
+
 .menu .navbar ul li a {
     font-size: 18px;
-    padding: 20px;
-    color: #111111;
-    display: block;
+    color: #333;
+    padding: 10px 15px;
+    transition: color 0.3s;
 }
+
 .menu .navbar ul li a:hover {
-    color: #FF3C2A;
-}
-#menu{
-    display: none;
-}
-.menu-icon {
-    width: 25px;
-}
-.menu label {
-    display: none;
-    cursor: pointer;
+    color: #ff4d94;
 }
 
-
+/* -------------------- CARRITO -------------------- */
 .submenu {
     position: relative;
 }
+
 .submenu #carrito {
     display: none;
-
 }
+
 .submenu:hover #carrito {
     display: block;
     position: absolute;
     right: 0;
-    backdrop-filter: blur(10px) ;
     top: 100%;
-    z-index:1 ;
-    background-color: #4E4b5e76;
+    z-index: 1;
+    background-color: rgba(255, 77, 148, 0.2);
     padding: 20px;
     min-width: 400px;
-} 
+    backdrop-filter: blur(10px);
+}
+
 table {
     width: 100%;
+    border-collapse: collapse;
 }
+
 th, td {
-    color:   #fff;
+    color: #333;
+    padding: 10px;
+    text-align: center;
 }
-.borrar{
+
+.borrar {
     background-color: red;
     border-radius: 50%;
     padding: 5px 10px;
     color: #fff;
-    font-weight: 800;
-    cursor: pointer;      
+    cursor: pointer;
 }
+
 /* -------------------- HEADER CONTENT -------------------- */
 .header-content {
     display: flex;
-   align-items: center;
-   flex: 1; 
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+    margin-top: 100px;
 }
+
 .header-txt {
-    flex-basis: 40%;
+    flex-basis: 45%;
 }
+
 .header-txt h1 {
-    font-size: 70px;
-    line-height:1 ;
-    color: #000;
+    font-size: 64px;
+    color: #ff4d94;
     text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.header-txt p {
+    font-size: 20px;
+    color: #333;
     margin-bottom: 25px;
 }
 
-
-   
-    
-p{
-    color: #555555;
-    font-size: 18px;
-    margin-bottom: 25px;
-}
-.btn-1 , .btn-3 {
+.btn-1 {
     display: inline-block;
-    padding: 10px 30px  ;
-    color:red;
-    border: 2px solid red; 
-    text-transform: capitalize;
+    padding: 12px 30px;
+    color: #ff4d94;
+    border: 2px solid #ff4d94;
     border-radius: 15px;
+    transition: all 0.3s;
 }
-.btn-1:hover , .btn-3:hover {
-    background-color: red;
+
+.btn-1:hover {
+    background-color: #ff4d94;
     color: #fff;
 }
+
 .header-img {
-    flex: 60%;
+    flex-basis: 50%;
     text-align: right;
 }
-/* -------------------- OFERTAS -------------------- */
 
-.Ofertas {
-    padding: 100px 0;
+/* -------------------- OFERTAS (SOFÁS Y SILLAS) -------------------- */
+.Ofertas-container {
+    padding: 80px 20px;
+    background-color: #ffe6f5;
 }
 
-h2 {
-    font-size: 40px;
-    margin-bottom: 10px;
-    color: #333;
-}
-
-.Ofertas-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: stretch;
-    gap: 30px;
-    margin: 40px 0;
-}
-
-.oferts-1 {
-    flex: 1;
-    background: #fff;
-    padding: 30px;
-    border-radius: 12px;
-    text-align: center;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-}
-
-.oferts-1 img {
-    width: 150px;
-    height: auto;
+.Ofertas-container h2 {
+    font-size: 38px;
+    color: #ff4d94;
     margin-bottom: 15px;
 }
 
+.Ofertas-container p {
+    font-size: 16px;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.Ofertas-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+/* Tarjetas de productos */
+.oferts-1 {
+    background: #fff;
+    padding: 28px;
+    border-radius: 14px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s;
+    min-height: 330px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.oferts-1:hover {
+    transform: translateY(-6px);
+}
+
+.oferts-1 img {
+    width: 130px;
+    height: 130px;
+    object-fit: contain;
+    margin: 0 auto 10px;
+}
+
 .oferts-1 h3 {
-    font-size: 22px;
+    font-size: 20px;
     margin-bottom: 5px;
     color: #333;
 }
 
-.producto-txt p {
-    margin-bottom: 10px;
-    font-size: 18px;
-}
-
 .precio {
-    font-size: 22px;
+    color: #ff4d94;
+    font-size: 18px;
     font-weight: bold;
-    color: red;
-    margin-bottom: 20px;
+    margin: 10px 0;
 }
 
 .btn-3 {
-    padding: 6px 25px;
+    padding: 6px 20px;
+    border: 2px solid #ff4d94;
+    color: #ff4d94;
+    border-radius: 10px;
+    transition: all 0.3s;
+    text-decoration: none;
 }
 
-/* ---- TARJETA GRANDE (PROMOCIÓN SILLAS) ---- */
+.btn-3:hover {
+    background-color: #ff4d94;
+    color: #fff;
+}
 
+/* Cuadros promocionales */
 .logan-1 {
-    flex: 1;
-    height: 340px;
-    background: linear-gradient(
-            rgba(0, 0, 0, 0.3),
-            rgba(0, 0, 0, 0.3)
-        ),
-        url(images/ch1.jpg);
+    min-height: 330px;
+    background: linear-gradient(rgba(255,77,148,0.3), rgba(255,77,148,0.3)),
+                url('images/ch1.jpg');
     background-size: cover;
     background-position: center;
-    border-radius: 12px;
-    padding: 40px;
+    border-radius: 14px;
+    padding: 25px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: flex-end;
+    color: white;
 }
 
 .logan-1 h3 {
-    font-size: 32px;
-    color: #fff;
-    margin-bottom: 10px;
+    font-size: 24px;
+    margin-bottom: 8px;
 }
 
 .logan-1 p {
-    font-size: 18px;
-    color: #eee;
-    margin-bottom: 30px;
+    font-size: 16px;
+    margin-bottom: 15px;
 }
 
 .btn-2 {
-    padding: 10px 25px;
-    border: 1px solid #fff;
-    color: #fff;
     display: inline-block;
+    padding: 8px 20px;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    transition: all 0.3s;
+    text-decoration: none;
 }
-/* -------------------- FOOTER -------------------- */
 
-.footer{
-    padding: 70px 0;
+.btn-2:hover {
+    background-color: #fff;
+    color: #ff4d94;
+}
+
+/* -------------------- PROMOCIÓN -------------------- */
+.promotion {
+    padding: 80px 0;
+    background-color: #ffe6f0;
+}
+
+.promotion-content {
     display: flex;
-    justify-content: space-between;
+    gap: 30px;
+    align-items: center;
 }
 
-.footer h3{
+.promotion-txt h2 {
+    font-size: 32px;
+    color: #ff4d94;
+    margin-bottom: 15px;
+}
+
+.promotion-txt p {
+    font-size: 16px;
     margin-bottom: 20px;
 }
 
-.footer ul li{
-    margin-bottom: 10px;
+.promotion-img img {
+    width: 250px;
 }
 
-.footer ul li a{
-    color: #333;
+/* -------------------- PRODUCTOS -------------------- */
+.producto {
+    padding: 80px 0;
+    background-color: #fff0f5;
+}
+
+.producto h1 {
+    font-size: 36px;
+    color: #ff4d94;
+    margin-bottom: 15px;
+}
+
+.producto p {
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.producto-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.producto-content .oferts-1 img {
+    width: 100px;
+}
+
+/* -------------------- BLOG -------------------- */
+.blog {
+    padding: 80px 0;
+    background-color: #ffe6f5;
+}
+
+.blog h2 {
+    font-size: 32px;
+    color: #ff4d94;
+    margin-bottom: 15px;
+}
+
+.blog-content {
+    display: flex;
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.blog-1 {
+    flex: 1;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+.blog-1 img {
+    width: 100%;
+    display: block;
+}
+
+.blog-txt {
+    padding: 15px;
+}
+
+.btn-4 {
+    display: inline-block;
+    padding: 6px 20px;
+    border: 2px solid #ff4d94;
+    color: #ff4d94;
+    border-radius: 10px;
+    margin-top: 10px;
+    transition: all 0.3s;
+}
+
+.btn-4:hover {
+    background-color: #ff4d94;
+    color: #fff;
+}
+
+/* -------------------- FOOTER -------------------- */
+.footer {
+    background-color: #ffd6eb;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    padding: 40px 0;
+    text-align: left;
+}
+
+.footer .link {
+    min-width: 140px;
+}
+
+.footer h3 {
+    margin-bottom: 8px;
     font-size: 18px;
+}
+
+.footer ul li {
+    margin-bottom: 5px;
+}
+
+.footer a {
+    color: #ff4d94;
+    transition: 0.3s;
+    font-size: 15px;
+}
+
+.footer a:hover {
+    color: #ff1a75;
 }
