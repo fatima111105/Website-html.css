@@ -9,7 +9,7 @@
 
 body {
     font-family: 'Cormorant Garamond', serif;
-    background-color: #fff0f5; /* fondo general rosa suave */
+    background-color: #fff0f5; 
     color: #333;
 }
 
@@ -160,9 +160,16 @@ th, td {
 }
 
 /* -------------------- OFERTAS (SOFÁS Y SILLAS) -------------------- */
+/* -------------------- OFERTAS (SOFÁS Y SILLAS) -------------------- */
 .Ofertas-container {
-    padding: 80px 20px;
+    padding: 80px 0; /* solo vertical */
     background-color: #ffe6f5;
+}
+
+.Ofertas-container .container {
+    padding: 0 20px; /* márgenes laterales iguales a otras secciones */
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .Ofertas-container h2 {
@@ -234,7 +241,6 @@ th, td {
     background-color: #ff4d94;
     color: #fff;
 }
-
 /* Cuadros promocionales */
 .logan-1 {
     min-height: 330px;
