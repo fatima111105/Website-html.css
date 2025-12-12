@@ -30,7 +30,7 @@ img {
 .header {
     display: flex;
     flex-direction: column;
-    min-height: 95vh;
+    min-height: 100vh;
     background: linear-gradient(90deg, #ffe6f0 0%, #ffcce6 50%, #ffb3d9 100%);
     position: relative;
     padding: 70px 0;
