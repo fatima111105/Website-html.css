@@ -21,7 +21,7 @@ img {
 
 /* -------------------- CONTAINER -------------------- */
 .container {
-    max-width: 1200px;
+    max-width: 1300px;
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -30,7 +30,7 @@ img {
 .header {
     display: flex;
     flex-direction: column;
-    min-height: 80vh;
+    min-height: 95vh;
     background: linear-gradient(90deg, #ffe6f0 0%, #ffcce6 50%, #ffb3d9 100%);
     position: relative;
     padding: 70px 0;
